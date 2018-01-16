@@ -78,31 +78,49 @@ print(A)
 
 
 ###fifth excersice - write a function that take a first name, last name and
-##year of birth.
-##calculate the person' age, and acroname
-##your intials are X.Y. AND YOUR AGE IS xxxx
+  ##year of birth.
+  ##calculate the person' age, and acroname
+  ##your intials are X.Y. AND YOUR AGE IS xxxx
 
+first_name = input ('enter your first name:')
+last_name = input ('enter your last name:')
+year_of_birth = input ('enter your year of birth:')
 
-
-def details (first_name, last_name, year_of_birth):
-    fn=str(first_name)[0]
-    ln=str(last_name)[0]
-    bd=year_of_birth
+if  first_name.isalpha() and last_name.isalpha():
+    fn = str(first_name)[0]
+    ln = str(last_name)[0]
+    bd = int(year_of_birth)
     import datetime
     now = datetime.datetime.now()
     age = now.year - bd
-    return ("your intials are {}.{} and your age is {}").format (fn[0],ln[0],age)
+    print (("your intials are {}.{} and your age is {}".format(fn[0].upper(), ln[0].upper(), age)))
 
-B= details ("meytal", "avgil", 1980)
 
-print ("the answer to the fifth excercise is:")
-print (B)
+  #B = details("meytal", "avgil", 1980)
+
+  ##print("the answer to the fifth excercise is:")
+  ##print(B)
 
 
 
 
 ####sixth exercise - guess the number
+
 import random
-for x in range(1): ###print 1 number
-  computer = (random.randint(1,10)) ### will select a number between 1 and 10
-  print ("the computer chose {}".format (computer))
+computer_number = (random.randint(1,10)) ### will select a number between 1 and 10
+person_number = input("guess a number between 1 to 10:")
+
+if person_number == computer_number:
+    print ("the computer chose {}".format (computer_number))
+    print ("you won!")
+else:
+    print("the computer chose {}".format(computer_number))
+    print ("you lose")
+
+
+if int(person_number) > int(computer_number):
+    print ("the computer's number is smaller than your number")
+elif person_number < computer_number:
+    print ("the computer's number is bigger than your number")
+else:
+    print ("the computer's number is equal to your number")
