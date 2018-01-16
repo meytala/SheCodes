@@ -115,7 +115,7 @@ if person_number == computer_number:
     print ("you won!")
 else:
     print("the computer chose {}".format(computer_number))
-    print ("you lose")
+    print ("you lost :(")
 
 
 if int(person_number) > int(computer_number):
