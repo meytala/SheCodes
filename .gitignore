@@ -1,3 +1,5 @@
 
-ex1/venv/*
+*/venv/*
 *.idea
+*.pyc
+*.png
