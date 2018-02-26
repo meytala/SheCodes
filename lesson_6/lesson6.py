@@ -43,3 +43,42 @@ for i in range (100):
         print ("hello")
 
     print ("passing") ###after 6 will print i
+
+
+
+
+Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+
+
+#string_match('xxcaazz', 'xxbaaz') → 3
+#string_match('abc', 'abc') → 2
+#string_match('abc', 'axc') → 0
+
+def string_match(a,b):
+    num_match = 0
+    for i in range (0, min(len(a), len(b))-1):
+        a_string = '{}{}'.format(a[i],a[i+1])
+        b_string = '{}{}'.format(b[i],b[i+1])
+        if a_string == b_string:
+            num_match += 1
+    return num_match
+
+results = string_match('abc', 'abc')
+print(results)
+
+
+#####write a function that accept a list of strings
+#the fnctionj return the string that are longer than or equal to 2
+#and the first and the last are identical
+
+def string_test (a):
+    text = []
+    for i in a:
+        if len(i) >= 2 and i[0]==i[-1]:
+            text.append(i)
+    return text
+
+a= ['aba', 'xyz', 'aa', 'x', 'bbb']
+result_2 = string_test(a)
+print ('the answer to 2 is:')
+print (result_2)
