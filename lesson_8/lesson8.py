@@ -56,6 +56,7 @@ print ("question 8:")
 #    """Print out the hailstone sequence starting at n, and return the
 #     number of elements in the sequence.
 #
+#     >>> a = hailstone(10)
 #     10
 #     5
 #     16
