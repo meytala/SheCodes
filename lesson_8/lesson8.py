@@ -155,3 +155,79 @@ def num_to_zero (n):
         return num_to_zero (n-1)
 
 print (num_to_zero (5))
+
+print ("Q4:")
+# 4. Write a function using recursion to print numbers from 0 to n (you just need to change one line in the program
+# of problem 1).
+
+def zero_to_num (n):
+    if n >= 0:
+        zero_to_num (n-1)
+        print (n)
+
+print (zero_to_num (5))
+
+print ("Q5:")
+
+# 5. Write a function using recursion that takes in a string and returns a reversed copy of the string. The only
+# string operation you are allowed to use is string concatenation.
+
+def rev_string(n):
+    length = len(n)
+    if length >=1:
+        rev_string(n[1:])
+        print (n[0])
+
+a="meytal"
+print (rev_string(a))
+
+print ("Q6:")
+#6. Write a function using recursion to check if a number n is prime (you have to check whether n is divisible by
+#any number below n).
+
+# def prime(n):
+#     if n>1:
+#         if n%(n-1)==0:
+#             prime(n-1)
+#             print(n + "is not a Prime number")
+#         else:
+#             print(n + "is a prime number")
+#
+# print(prime(10))
+
+
+print("Q8:")
+#Question 8: Hailstone
+#For the hailstone function from homework 1,
+# you pick a positive integer n as the start.
+# If n is even, divide it by 2.
+# If n is odd, multiply it by 3 and add 1.
+# Repeat this process until n is 1.
+# Write a recursive version of hailstone that prints out the values of the sequence and returns the number of steps.
+
+def hailstone (n):
+    print(int(n))
+    if n==1:
+        return 1
+    else:
+        if n%2 == 0:
+            hailstone(int(n/2))
+        if n%2 != 0:
+            hailstone((int(n)*3)+1)
+
+
+def hailstone1(n):
+    print(n)
+    if n == 1:
+        return 1
+    elif n % 2 == 0:
+        return 1 + hailstone1(n // 2)
+    else:
+        return 1 + hailstone1(3 * n + 1)
+
+
+print(hailstone1(10))
+
+
+
+#Question 12: Insect Combinatorics
