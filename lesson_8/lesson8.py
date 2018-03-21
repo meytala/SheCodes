@@ -229,5 +229,21 @@ def hailstone1(n):
 print(hailstone1(10))
 
 
-
 #Question 12: Insect Combinatorics
+
+print("Q12:")
+def path (m,n):
+    if m==1 or n==1:
+        return 1
+    else:
+        return path(m-1,n) + path(m, n-1)
+
+print(path (5,7))
+
+def path(row, col, m, n):
+    if m == row and n == col:
+        return 1
+    elif m > row or n > col:
+        return 0
+    else:
+        path(row + 1, col, m, n) + path(row, col + 1, m ,n)
