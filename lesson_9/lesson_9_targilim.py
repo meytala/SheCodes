@@ -145,5 +145,3 @@ random_string = ''.join([random.choice(string.ascii_uppercase) for n in range(5)
 print(random_string)
 
 cows_and_bulls (random_string)
-
-
